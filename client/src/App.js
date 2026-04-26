@@ -360,7 +360,7 @@ function CandidateCard({ c, selected, onClick, rank, t, shortlisted, onShortlist
   const color  = scoreColor(c.finalScore, t);
   const icolor = interestColor(c.interestLevel, t);
   const live   = c.conversationInterestScore;
- 
+  const liveColor = live ? (live>=70?"#10b981":live>=45?"#f59e0b":"#f43f5e") : null;
 
   return (
     <div onClick={onClick} className={`cand-item${selected?" cand-selected":""}`}
