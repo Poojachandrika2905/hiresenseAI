@@ -12,7 +12,7 @@ if (process.env.OPENROUTER_API_KEY) {
   openai = new OpenAI({
     apiKey: process.env.OPENROUTER_API_KEY,
     baseURL: "https://openrouter.ai/api/v1",
-    defaultHeaders: { "HTTP-Referer": "https://hiresenseai-xp0u.onrender.com", "X-Title": "HireSense AI" }
+    defaultHeaders: { "HTTP-Referer": "http://localhost:3000", "X-Title": "HireSense AI" }
   });
   console.log("✅ OpenRouter AI enabled");
 } else {
@@ -469,6 +469,12 @@ async function parseJD(jd) {
   }
 }
 
+// ═══════════════════════════════════════════════════════════════════
+// FULLY REWRITTEN buildFallbackReply
+// Every response branch uses detectAskedSkill() so replies ALWAYS
+// reference only the skill that was actually asked about, and only
+// if the candidate truly owns a related skill.
+// ═══════════════════════════════════════════════════════════════════
 function buildFallbackReply(question, candidate, turnIndex) {
   const q  = question.toLowerCase();
   const sk = candidate.skills;
@@ -794,4 +800,4 @@ setInterval(() => {
   Object.keys(sessions).forEach(k => { if (parseInt(k.split("_")[1]||k) < cutoff) delete sessions[k]; });
 }, 3600000);
 
-app.listen(5000, () => console.log("🚀 HireSense AI running on https://hiresenseai-xp0u.onrender.com"));
+app.listen(5000, () => console.log("🚀 HireSense AI running on http://localhost:5000"));

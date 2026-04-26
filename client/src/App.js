@@ -17,7 +17,7 @@ const themes = {
     bgPrimary:"#f5f3ff",bgSecondary:"#ede9fe",bgCard:"#ffffff",bgCardHover:"#faf8ff",
     bgInput:"#f9f8ff",border:"rgba(109,40,217,0.15)",borderActive:"rgba(109,40,217,0.45)",
     textPrimary:"#13003d",textSecondary:"#3b1fa8",textMuted:"#8b80b0",
-    accentMain:"#6d28d9",accentLight:"#7c3aed",accentTeal:"#0891b2",
+    accentMain:"#6d28d9",accentLight:"#7c3aedgit",accentTeal:"#0891b2",
     accentAmber:"#d97706",accentRed:"#e11d48",glow:"rgba(109,40,217,0.15)",
   }
 };
