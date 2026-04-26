@@ -387,3 +387,32 @@ Candidate Skills: Java, React
 
 → Match = 1/2
 → Score = 50%
+
+
+🔹 Interest Score (0–100)
+
+Based on conversation response:
+
+Response Type	Score
+Actively looking	90–100
+Open to opportunities	70–80
+Neutral	50–60
+Not interested	20–40
+🔹 Final Score
+Final Score = 0.6 × Match Score + 0.4 × Interest Score
+
+
+SAMPLE INPUT
+🔹 Job Description
+Looking for a Java Developer with Spring Boot experience.
+Must have backend development skills and REST API knowledge.
+
+Ranked Candidates
+✅ Candidate 1: Sneha 22
+Match Score: 100
+Interest Score: 90
+Final Score: 96
+Reason: Matched Skills → Java, Spring Boot
+💬 Conversation
+Recruiter: Are you open to this role?
+Candidate: I am actively looking for new opportunitie
