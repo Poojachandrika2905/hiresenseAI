@@ -727,9 +727,7 @@ function ChatPanel({ candidate, onBack, t, onInterestUpdate }) {
     setLoading(false);
   };
 
-  const liveColor = liveScore
-    ? liveScore>=70?"#10b981":liveScore>=45?"#f59e0b":"#f43f5e"
-    : "var(--text-muted)";
+  // REMOVED THE UNUSED liveColor VARIABLE HERE
 
   return (
     <div style={{display:"flex",flexDirection:"column",height:"100%",padding:18}}>
