@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import axios from "axios";
 import "./App.css";
 
-const API = "http://localhost:5000";
+const API = "https://hiresenseai-xp0u.onrender.com";
 
 // ── Themes ───────────────────────────────────────────────────────────────────
 const themes = {
