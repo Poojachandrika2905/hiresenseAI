@@ -340,3 +340,50 @@ MIT — free to use, modify, and distribute.
 ---
 
 *HireSense AI — making talent scouting smarter, one conversation at a time.*
+
+Architechture diagram
+
+[User / Recruiter UI (React)]
+            ↓
+   Enter Job Description
+            ↓
+[Frontend (React App)]
+            ↓ API Call (/analyze)
+[Backend (Node.js + Express)]
+            ↓
+   1. JD Parsing (skills extraction)
+   2. Candidate Filtering (skill match)
+   3. Scoring Engine
+            ↓
+   Ranked Candidates (Match + Interest)
+            ↓
+[Frontend Display]
+
+-------------------------------------
+
+(Chat Flow)
+
+[Frontend Chat UI]
+            ↓ API (/chat)
+[Backend Chat Engine]
+            ↓
+[OpenRouter AI / Fallback Logic]
+            ↓
+Dynamic Candidate Response
+
+Explanation :
+Frontend (React) → collects JD and displays ranked candidates
+Backend (Node.js) → handles logic, scoring, and filtering
+AI Layer (OpenRouter) → simulates real candidate conversation
+Scoring Engine → calculates match and interest scores
+Session Memory → maintains chat history per candidate
+
+Match Score (0–100)
+Match Score = (Matched Skills / Required Skills) × 100
+
+Example:
+JD Skills: Java, Spring Boot
+Candidate Skills: Java, React
+
+→ Match = 1/2
+→ Score = 50%
